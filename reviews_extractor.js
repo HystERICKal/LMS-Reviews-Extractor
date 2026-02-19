@@ -12,6 +12,29 @@
 // ==/UserScript==  
 
 //localStorage.removeItem('seenReviewIDs');  // Uncomment this line to clear the stored seen review IDs from localStorage for testing purposes
+
+//Google Apps Script webhook
+// function doPost(e) {
+//   try {
+//     var payload = JSON.parse(e.postData.contents);
+//     var data = payload.data;  // Array of arrays: [[reviewType, name, email, score, link], ...]
+    
+//     var sheetId = '1wF3dGou1N38TvSa1Ulg4Ouoa5EXf4QpqOaxjL2uxnMg';  // Replace with your Google Sheet's ID (from the URL: docs.google.com/spreadsheets/d/YOUR_SHEET_ID_HERE/edit)
+//     var sheetName = 'Second_Review';  // Replace if your sheet has a different name
+    
+//     var sheet = SpreadsheetApp.openById(sheetId).getSheetByName(sheetName);
+    
+//     data.forEach(row => {
+//       sheet.appendRow(row);
+//     });
+    
+//     return ContentService.createTextOutput('Success').setMimeType(ContentService.MimeType.TEXT);
+//   } catch (error) {
+//     return ContentService.createTextOutput('Error: ' + error.message).setMimeType(ContentService.MimeType.TEXT);
+//   }
+// }
+
+
 (function() {  // Begins an immediately invoked function expression (IIFE) to create a private scope and prevent pollution of the global namespace
     'use strict';  // Enables strict mode, which helps catch common errors and enforces stricter parsing and error handling
 
