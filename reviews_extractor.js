@@ -10,6 +10,8 @@
 // @connect script.googleusercontent.com  
 // @connect *.googleusercontent.com  
 // ==/UserScript==  
+
+//localStorage.removeItem('seenReviewIDs');  // Uncomment this line to clear the stored seen review IDs from localStorage for testing purposes
 (function() {  // Begins an immediately invoked function expression (IIFE) to create a private scope and prevent pollution of the global namespace
     'use strict';  // Enables strict mode, which helps catch common errors and enforces stricter parsing and error handling
 
